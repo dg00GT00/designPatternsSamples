@@ -27,13 +27,11 @@ class Decorator(Component):
     initialize it.
     """
 
-    _component: Component = None
-
     def __init__(self, component: Component) -> None:
         self._component = component
 
     @property
-    def component(self) -> str:
+    def component(self) -> Component:
         """
         The Decorator delegates all work to the wrapped component.
         """
@@ -41,7 +39,7 @@ class Decorator(Component):
         return self._component
 
     def operation(self) -> str:
-        self._component.operation()
+        return self._component.operation()
 
 
 class ConcreteDecoratorA(Decorator):

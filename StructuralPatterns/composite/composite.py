@@ -16,7 +16,7 @@ class Component(ABC):
         return self._parent
 
     @parent.setter
-    def parent(self, parent: Component):
+    def parent(self, parent: Component) -> None:
         """
         Optionally, the base Component can declare an interface for setting and
         accessing a parent of the component in a tree structure. It can also

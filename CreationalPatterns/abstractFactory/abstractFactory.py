@@ -28,10 +28,10 @@ class ConcreteFactory1(AbstractFactory):
     product, while inside the method a concrete product is instantiated.
     """
 
-    def create_product_a(self) -> ConcreteProductA1:
+    def create_product_a(self) -> AbstractProductA:
         return ConcreteProductA1()
 
-    def create_product_b(self) -> ConcreteProductB1:
+    def create_product_b(self) -> AbstractProductB:
         return ConcreteProductB1()
 
 
@@ -80,14 +80,14 @@ class AbstractProductB(ABC):
     the same concrete variant.
     """
     @abstractmethod
-    def useful_function_b(self) -> None:
+    def useful_function_b(self) -> str:
         """
         Product B is able to do its own thing...
         """
         pass
 
     @abstractmethod
-    def another_useful_function_b(self, collaborator: AbstractProductA) -> None:
+    def another_useful_function_b(self, collaborator: AbstractProductA) -> str:
         """
         ...but it also can collaborate with the ProductA.
 

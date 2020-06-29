@@ -79,18 +79,18 @@ visitor's methods over various objects of the structure.
 
 
 class ConcreteVisitor1(Visitor):
-    def visit_concrete_component_a(self, element) -> None:
+    def visit_concrete_component_a(self, element: ConcreteComponentA) -> None:
         print(f"{element.exclusive_method_of_concrete_component_a()} + ConcreteVisitor1")
 
-    def visit_concrete_component_b(self, element) -> None:
+    def visit_concrete_component_b(self, element: ConcreteComponentB) -> None:
         print(f"{element.special_method_of_concrete_component_b()} + ConcreteVisitor1")
 
 
 class ConcreteVisitor2(Visitor):
-    def visit_concrete_component_a(self, element) -> None:
+    def visit_concrete_component_a(self, element: ConcreteComponentA) -> None:
         print(f"{element.exclusive_method_of_concrete_component_a()} + ConcreteVisitor2")
 
-    def visit_concrete_component_b(self, element) -> None:
+    def visit_concrete_component_b(self, element: ConcreteComponentB) -> None:
         print(f"{element.special_method_of_concrete_component_b()} + ConcreteVisitor2")
 
 
